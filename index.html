@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="es" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minutas IA Enterprise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1E293B', // Slate 800
+              secondary: '#4F46E5', // Indigo 600
+              accent: '#10B981', // Emerald 500
+              background: '#F8FAFC', // Slate 50
+              surface: '#FFFFFF',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'fade-in-up': 'fadeInUp 0.5s ease-out',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+              fadeInUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+              'progress-bar-stripes': {
+                'from': { backgroundPosition: '1rem 0' },
+                'to': { backgroundPosition: '0 0' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+      
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #F8FAFC;
+        transition: background-color 0.3s ease;
+      }
+      .dark body {
+        background-color: #0F172A;
+      }
+
+      /* Estilo Hoja A4 - ENTERPRISE PREMIUM */
+      .document-page {
+        background: white !important;
+        color: #000000 !important;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        padding: 2.5cm;
+        min-height: 29.7cm;
+        width: 21cm;
+        margin: 40px auto;
+        font-family: 'Lora', serif;
+        position: relative;
+      }
+
+      .document-page h1, 
+      .document-page h2, 
+      .document-page h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: #000000 !important;
+      }
+
+      .document-page table {
+        border: 2px solid #000000 !important;
+        border-collapse: collapse !important;
+        width: 100% !important;
+      }
+
+      .document-page th, .document-page td {
+        border: 1px solid #000000 !important;
+        padding: 14px !important;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #CBD5E1; 
+        border-radius: 10px;
+      }
+
+      @media print {
+        @page {
+          margin: 0;
+          size: A4;
+        }
+        
+        html, body {
+          background: white !important;
+          color: black !important;
+        }
+
+        .no-print {
+          display: none !important;
+        }
+
+        .document-page {
+          margin: 0 !important;
+          padding: 2cm !important;
+          box-shadow: none !important;
+          width: 100% !important;
+          display: block !important;
+        }
+      }
+
+      @keyframes progress-bar-stripes {
+        from { background-position: 1rem 0; }
+        to { background-position: 0 0; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

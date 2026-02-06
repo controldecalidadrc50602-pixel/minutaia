@@ -1,0 +1,9 @@
+
+{
+  "name": "Minutas IA Professional",
+  "description": "Plataforma de inteligencia de reuniones potenciada por Groq Llama 3.3 para análisis estratégico y transcripción ultra-rápida.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
